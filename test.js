@@ -1,4 +1,4 @@
-// 继承
+// 继承模块测试
 const mixin = require('merge-descriptors');
 var ting = {
     get name() {
