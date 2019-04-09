@@ -1,0 +1,14 @@
+{
+  "name": "preExpress",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "author": "st",
+  "dependencies": {},
+  "devDependencies": {
+    
+  }
+}
