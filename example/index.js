@@ -1,7 +1,7 @@
 const express = require('../lib/express');
 const app = express();
 
-app.post('/home', function(req, res) {
+app.get('/mo', function(req, res) {
     console.log('this is two')
     res.end('you send request two throw post');
 })
