@@ -1,4 +1,4 @@
-const express = require('../lib/express');
+const express = require('../lib/index');
 const app = express();
 // var router = express.Router();
 
@@ -18,6 +18,12 @@ const app = express();
 // });
 
 // app.use('/users', router);
+
+
+
+app.get(function(req, res) {
+    res.end('get request response')
+})
 
 app.listen(3000, function(){
     console.log('app is listen on 3000')
