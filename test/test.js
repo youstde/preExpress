@@ -18,4 +18,12 @@ function errTest(err) {
     }
 }
 // 参数个数
-console.log(errTest.length)
+// console.log(errTest.length)
+
+// 将伪数组变成数组
+function argumentTest() {
+    var slice = Array.prototype.slice
+    
+    console.log(slice.call(arguments))
+}
+argumentTest(1,2)

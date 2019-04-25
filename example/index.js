@@ -21,7 +21,10 @@ const app = express();
 
 
 
-app.get(function(req, res) {
+app.get(function(req, res, next) {
+    console.log('this is before next')
+    next()
+}, function(req, res, next) {
     res.end('get request response')
 })
 
