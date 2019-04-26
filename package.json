@@ -7,7 +7,9 @@
     "start": "node ./example/index.js"
   },
   "author": "st",
-  "dependencies": {},
+  "dependencies": {
+    "path-to-regexp": "^3.0.0"
+  },
   "devDependencies": {
     "array-flatten": "^2.1.2",
     "merge-descriptors": "^1.0.1",
