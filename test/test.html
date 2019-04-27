@@ -15,10 +15,23 @@
         // [1,2,3,4].forEach(function(item) {
         //     setTimeout(function(){console.log(item)}, 1e3)
         // })
-        var arr = [1,2,3,4]
-        for(var i=0; i< arr.length; i++) {
-            setTimeout(function(){console.log(arr[i])}, 1e3)
+        // var arr = [1,2,3,4]
+        // for(var i=0; i< arr.length; i++) {
+        //     setTimeout(function(){console.log(arr[i])}, 1e3)
+        // }
+        var far = {
+            name: 'jack'
         }
+        var proto = Object.create(null)
+        proto.age = 28;
+        proto.getName = function() {
+            return this.name;
+        }
+        var b = Object.setPrototypeOf(far, proto);
+        // 等同于
+        // var b = {__proto__: a};
+        console.log(b)
+        b.age // 1
     </script>
 </head>
 <body>
