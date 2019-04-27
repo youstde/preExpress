@@ -21,12 +21,26 @@ const app = express();
 
 
 
-app.get(function(req, res, next) {
-    console.log('this is before next')
-    next()
-}, function(req, res, next) {
-    res.end('get request response')
-})
+// app.get(function(req, res, next) {
+//     console.log('this is before next')
+//     next()
+// }, function(req, res, next) {
+//     res.end('get request response')
+// })
+
+
+app.get('/foo', function (req, res, next) {
+    res.end('Welcome to GET /foo')
+  })
+  
+  app.get('/bar', function (req, res, next) {
+    res.end('Welcome to GET /bar')
+  })
+  
+  app.post('/foo', function (req, res, next) {
+    res.end('Welcome to POST /foo')
+  })
+  
 
 app.listen(3000, function(){
     console.log('app is listen on 3000')
