@@ -19,19 +19,28 @@
         // for(var i=0; i< arr.length; i++) {
         //     setTimeout(function(){console.log(arr[i])}, 1e3)
         // }
-        var far = {
-            name: 'jack'
+        // var far = {
+        //     name: 'jack'
+        // }
+        // var proto = Object.create(null)
+        // proto.age = 28;
+        // proto.getName = function() {
+        //     return this.name;
+        // }
+        // var b = Object.setPrototypeOf(far, proto);
+        // // 等同于
+        // // var b = {__proto__: a};
+        // console.log(b)
+        // b.age // 1
+
+        var app = function() {
+            console.log(this)
         }
-        var proto = Object.create(null)
-        proto.age = 28;
-        proto.getName = function() {
-            return this.name;
+        app.listen = function() {
+            console.log(this)
         }
-        var b = Object.setPrototypeOf(far, proto);
-        // 等同于
-        // var b = {__proto__: a};
-        console.log(b)
-        b.age // 1
+        app()  //window
+        app.listen()  // app
     </script>
 </head>
 <body>
